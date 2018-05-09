@@ -1,6 +1,6 @@
 # Exercice 1
-1. Créer un serveur HTTP "dogs" avec express qui permet de créer, lister, récupérer et mettre à jours des Chiens. Ils seront caractérisés par leurs "nom" et "id"
-2. Créer un serveur HTTP "owners" avec express qui permet de créer, lister, récupérer et mettre à jours des Propriétaires. Ils seront caractérisés par leurs "nom", "prénom", "civilité", "age" et "id"
+1. Créer un serveur HTTP "dogs" avec express qui permet de créer, lister, récupérer et mettre à jours des Chiens. Ils seront caractérisés par leurs "nom" et "id". Chaque route doit retourner du json
+2. Créer un serveur HTTP "owners" avec express qui permet de créer, lister, récupérer et mettre à jours des Propriétaires. Ils seront caractérisés par leurs "nom", "prénom", "civilité", "age" et "id". Chaque route doit retourner du json
 3. Créer un serveur HTTP "api" avec express qui permet lister les propriétaires avec tous leurs chiens. 
 Voici un exemple de donnée retour:
 ```json
@@ -38,8 +38,9 @@ Voici un exemple de donnée retour:
 ]
 ```
 4. Ce serveur HTTP doit également être capable de créer un Propriétaire, de créer un Chien et de l'associer à un propriétaire (la création du Chien peut se faire dans la même route que l'association si tu veux)
+Chaque route doit retourner du json.
 
-Tu peux utiliser la base de donnée que tu souhaites, celle qui est installée sur ta machine
+Tu peux utiliser la base de donnée que tu souhaites, celle qui est installée sur ta machine et avec laquelle tu es à l'aise
 
 # Exercice 2
 
@@ -48,12 +49,15 @@ Tu peux utiliser la base de donnée que tu souhaites, celle qui est installée s
 
 # Exercice 3
 
-1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, installe cette base de donnée via un docker, et utilise là
+1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, installe cette base de donnée via un docker, et utilise là.
+2. Vérifie que tes applications tournent toujours
 
 # Exercice 4
 
-1. Utilise le Dockerfile fourni dans ce projet (normalement, tu ne devrais pas avoir à le toucher) pour que tes 3 applications tournent chacune dans un Docker plutôt que directement sur ta machine. Chacun de ces Docker
-2. Une fois que tes 3 images Docker sont "buildées", "run" ces images pour vérifier que les appels HTTP marchent toujours. (/!\ Tu va devoir utiliser les variables d'environnement de Node pour configurer l'adresse Url)
+1. Utilise le Dockerfile fourni dans ce projet (normalement, tu ne devrais pas avoir à le toucher) pour que tes 3 applications tournent chacune dans un Docker plutôt que directement sur ta machine.
+
+2. Une fois que tes 3 images Docker sont [buildées](https://docs.docker.com/engine/reference/commandline/build/), [run](https://docs.docker.com/engine/reference/run/) ces images pour vérifier que les appels HTTP marchent toujours. 
+/!\ Les Docker étant des machines virtuelle, elles n'arriveront pas à communiquer entre elles via `localhost`. Tu va devoir user de tes talents et surtout des variables d'environnements et options du `docker run` pour que tes applications puissent se connecter à ta base de données, et que ton application "api" puissent contacter tes 2 autres applications
 
 # Exercice 5
 
