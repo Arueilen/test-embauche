@@ -52,7 +52,7 @@ Tu peux utiliser la base de donnée que tu souhaites, celle qui est installée s
 
 # Exercice 4
 
-1. Utilise le Dockerfile fourni dans ce projet pour que tes 3 applications tournent chacune dans un Docker plutôt que directement sur ta machine. Chacun de ces Docker
+1. Utilise le Dockerfile fourni dans ce projet (normalement, tu ne devrais pas avoir à le toucher) pour que tes 3 applications tournent chacune dans un Docker plutôt que directement sur ta machine. Chacun de ces Docker
 2. Une fois que tes 3 images Docker sont "buildées", "run" ces images pour vérifier que les appels HTTP marchent toujours. (/!\ Tu va devoir utiliser les variables d'environnement de Node pour configurer l'adresse Url)
 
 # Exercice 5
