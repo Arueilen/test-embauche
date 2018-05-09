@@ -43,11 +43,12 @@ Tu peux utiliser la base de donnée que tu souhaites, celle qui est installée s
 
 # Exercice 2
 
-1. Si ce n'est déjà fait, utilise les "Promise" javascript dans ces 3 applications, ainsi que de l'[ES6](http://es6-features.org/)
+1. Si ce n'est déjà fait, utilise les [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) javascript dans ces 3 applications, ainsi que de l'[ES6](http://es6-features.org/)
+2. Une fois que les Promise sont faites, transforme les en [Async/Await](https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016)
 
 # Exercice 3
 
-1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, installe une base de donnée via un docker, et utilise là
+1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, installe cette base de donnée via un docker, et utilise là
 
 # Exercice 4
 
