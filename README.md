@@ -1,17 +1,18 @@
 # Exercice 1
-1. Crée un projet "dogs" qui sera un serveur HTTP express.
+1. Crée une branche de travail test/cyril
+2. Crée un projet "dogs" qui sera un serveur HTTP express.
 Ce serveur sera capable de créer, lister, récupérer et mettre à jours des Chiens. 
 Ils seront caractérisés par leurs "nom" et "id". 
 Ce serveur sera connecté à une table "dogs", et chaque route doit retourner du json
 
-2. Créer un projet "owners" qui sera un serveur HTTP express.
+3. Créer un projet "owners" qui sera un serveur HTTP express.
 Ce serveur doit être capable de créer, lister, récupérer et mettre à jours des Propriétaires. 
 Ils seront caractérisés par leurs "nom", "prénom", "civilité", "age" et "id". 
 Ce serveur sera connecté à une table "owners", et chaque route doit retourner du json
 
 Tu peux utiliser la base de donnée que tu souhaites (SQL ou NoSql), celle qui est installée sur ta machine et avec laquelle tu es à l'aise.
 
-3. Créer un projet "api" qui sera un serveur HTTP express. 
+4. Créer un projet "api" qui sera un serveur HTTP express. 
 Il doit être capable de lister les propriétaires avec tous leurs chiens, créer un propriétaire, créer un chien et associer un chien à un propriétaire (la création du chien peut se faire dans le même appel que l'association)
 
 Voici un exemple de donnée retour pour le listing:
