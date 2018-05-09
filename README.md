@@ -57,7 +57,7 @@ Voici un exemple de donnée retour pour le listing:
 
 # Exercice 3
 
-1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, installe cette base de donnée via un docker, et utilise là.
+1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, [installe cette base de donnée via un docker](https://docs.docker.com/engine/reference/commandline/pull/), et utilise là.
 2. Vérifie que tes applications tournent toujours
 
 # Exercice 4
