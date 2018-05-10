@@ -87,7 +87,7 @@ Je te conseille d'utiliser Postman pour tester tes appels de création, plus pra
 
 1. Créé un docker-compose.yaml pour faciliter le "build" et le "run" de ces 3 images
 
-# Exercice AMQP
+# Exercice "Surprends-moi !"
 
 1. Installe un docker rabbitmq
 2. Transforme tes 2 applications "dogs" et "owner" en client rabbitmq (il va falloir que tu modifie les appels d'"api" vers ces micro-services, car ce n'est plus de l'HTTP)
