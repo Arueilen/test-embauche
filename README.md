@@ -77,4 +77,5 @@ Je te conseille d'utiliser Postman pour tester tes appels, plus pratique qu'avec
 
 # Exercice 6
 
-1. Transforme tes 2 applications "dogs" et "owner" en serveur rabbitmq (il va falloir que tu modifie les appels d'"api" vers ces micro-services)
+1. Installe un docker rabbitmq
+2. Transforme tes 2 applications "dogs" et "owner" en client rabbitmq (il va falloir que tu modifie les appels d'"api" vers ces micro-services, car ce n'est plus de l'HTTP)
