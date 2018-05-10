@@ -44,8 +44,8 @@ Voici un exemple de donnée retour pour le listing:
         ]
     },
     {
-        "nom": "Proviste",
-        "prenom": "Alain",
+        "nom": "Suhre",
+        "prenom": "Sarah",
         "civilite": "M",
         "age": "12",
         "id": 2,
