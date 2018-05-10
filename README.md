@@ -85,7 +85,7 @@ Je te conseille d'utiliser Postman pour tester tes appels de création, plus pra
 
 # Exercice docker-compose
 
-1. Créé un docker-compose.yaml pour lancer ta (tes?) base de données, et faciliter le "build" et le "run" de tes 3 applications
+1. Créé un docker-compose.yaml pour lancer ta (tes?) base de données, et faciliter le "build" et le "run" de tes 3 applications (que ce soit au niveau des ports mais aussi des variables d'environnements)
 2. Lance ce docker-compose pour vérifier que tes applications tournent toujours.
 
 ## Félicitations ! T'as créé une architecture microservice !
