@@ -3,7 +3,7 @@
 
 Ce serveur sera connecté à une base de donnée de ton choix.
 
-Il doit être capable de créer et lister des Chiens.
+Il doit être capable de créer et lister des Chiens. (tu peux mettre ce que tu veux comme url)
 
 Ces "Chiens" seront caractérisés par leurs "nom", "id" et "owner_id".
 
@@ -15,7 +15,7 @@ Chaque route doit retourner du json.
 
 Ce serveur sera connecté à une base de donnée de ton choix. Tu n'es pas obligé d'utiliser la même base de donnée que l'exercice 1 si t'aimes le challenge :)
 
-Il doit être capable de créer et lister des Propriétaires.
+Il doit être capable de créer et lister des Propriétaires. (tu peux mettre ce que tu veux comme url)
 
 Les Propriétaires seront caractérisés par leurs "nom", "prenom", "civilite", "age" et "id".
 
@@ -25,7 +25,7 @@ Chaque route doit retourner du json
 
 3. Crée un projet "api" qui sera un 3ème serveur HTTP express.
 
-Il doit être capable de lister (avec filtres possibles) les propriétaires avec tous leurs chiens, créer un propriétaire et créer un chien en l'associant à son propriétaire
+Il doit être capable de lister (avec filtres possibles) les propriétaires avec tous leurs chiens, créer un propriétaire et créer un chien en l'associant à son propriétaire. (tu peux mettre ce que tu veux comme url)
 
 Voici un exemple de donnée retour pour le listing:
 ```json
