@@ -11,7 +11,7 @@ Un filtre sur l'owner_id doit être possible sur le listing des chiens.
 
 Chaque route doit retourner du json.
 
-2. Créer un projet "owners" qui sera un autre serveur HTTP express.
+2. Crée un projet "owners" qui sera un autre serveur HTTP express.
 
 Ce serveur sera connecté à une base de donnée de ton choix. Tu n'es pas obligé d'utiliser la même base de donnée que l'exercice 1 si t'aimes le challenge :)
 
@@ -23,7 +23,7 @@ Un filtre sur "nom" et/ou "prénom" et/ou "civilité" et/ou "age" doit être pos
 
 Chaque route doit retourner du json
 
-3. Créer un projet "api" qui sera un autre serveur HTTP express.
+3. Crée un projet "api" qui sera un 3ème serveur HTTP express.
 
 Il doit être capable de lister (avec filtres possibles) les propriétaires avec tous leurs chiens, créer un propriétaire et créer un chien en l'associant à son propriétaire
 
