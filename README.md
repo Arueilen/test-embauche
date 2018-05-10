@@ -3,27 +3,27 @@
 
 Ce serveur sera connecté à une base de donnée de ton choix.
 
-Ce serveur sera capable de créer et lister des Chiens. (un CRUD classique)
+Il doit être capable de créer et lister des Chiens.
 
-Ils seront caractérisés par leurs "nom", "id" et "owner_id".
+Ces "Chiens" seront caractérisés par leurs "nom", "id" et "owner_id".
 
 Un filtre sur l'owner_id doit être possible sur le listing des chiens.
 
 Chaque route doit retourner du json.
 
-2. Créer un projet "owners" qui sera un serveur HTTP express.
+2. Créer un projet "owners" qui sera un autre serveur HTTP express.
 
 Ce serveur sera connecté à une base de donnée de ton choix. Tu n'es pas obligé d'utiliser la même base de donnée que l'exercice 1 si t'aimes le challenge :)
 
-Ce serveur doit être capable de créer et lister des Propriétaires. (un CRUD classique)
+Il doit être capable de créer et lister des Propriétaires.
 
-Ils seront caractérisés par leurs "nom", "prenom", "civilite", "age" et "id".
+Les Propriétaires seront caractérisés par leurs "nom", "prenom", "civilite", "age" et "id".
 
 Un filtre sur "nom" et/ou "prénom" et/ou "civilité" et/ou "age" doit être possible sur le listing des propriétaires.
 
 Chaque route doit retourner du json
 
-3. Créer un projet "api" qui sera un serveur HTTP express.
+3. Créer un projet "api" qui sera un autre serveur HTTP express.
 
 Il doit être capable de lister (avec filtres possibles) les propriétaires avec tous leurs chiens, créer un propriétaire et créer un chien en l'associant à son propriétaire
 
@@ -63,11 +63,11 @@ Voici un exemple de donnée retour pour le listing:
 ]
 ```
 
-Je te conseille d'utiliser Postman pour tester tes appels, plus pratique qu'avec du curl.
+Je te conseille d'utiliser Postman pour tester tes appels de création, plus pratique qu'avec du curl.
 
 # Exercice Promise / ES6
 
-1. Si ce n'est déjà fait, utilise les [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) javascript dans ces 3 applications, ainsi que de l'[ES6](http://es6-features.org/)
+1. Si ce n'est déjà fait, utilise les [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) javascript dans ces 3 applications plutôt que des callback, ainsi que de l'[ES6](http://es6-features.org/)
 
 2. Une fois que les Promise sont faites, transforme celles possible en [Async/Await](https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016)
 
