@@ -73,7 +73,7 @@ Je te conseille d'utiliser Postman pour tester tes appels de création, plus pra
 
 # Exercice Docker
 
-1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, [installe cette base de donnée via un docker](https://docs.docker.com/engine/reference/commandline/pull/), et utilise là.
+1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, [installe cette base de donnée via un docker](https://docs.docker.com/engine/reference/commandline/pull/), coupe ta BDD sur ta machine et lance celle du docker.
 
 2. Vérifie que tes applications tournent toujours
 
