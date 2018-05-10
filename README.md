@@ -73,21 +73,19 @@ Je te conseille d'utiliser Postman pour tester tes appels de création, plus pra
 
 # Exercice Docker
 
-1. Plutôt que d'utiliser la base de donnée qui est installée sur ta machine, [installe cette base de donnée via un docker](https://docs.docker.com/engine/reference/commandline/pull/), coupe ta BDD sur ta machine et lance celle du docker.
+1. Plutôt que d'utiliser la (les?) base de donnée qui est installée sur ta machine, [installe cette base de donnée via un docker](https://docs.docker.com/engine/reference/commandline/pull/), coupe ta BDD sur ta machine et [run](https://docs.docker.com/engine/reference/run/) l'image docker que tu vient d'installer.
 
 2. Vérifie que tes applications tournent toujours
 
 3. Utilise le Dockerfile fourni dans ce projet pour [builder](https://docs.docker.com/engine/reference/commandline/build/) tes 3 applications dans un Docker plutôt que directement sur ta machine. Tu ne devrais pas avoir à toucher le Dockerfile.
 
-4. Une fois que tes 3 images Docker sont buildées, [run](https://docs.docker.com/engine/reference/run/) ces images pour vérifier que les appels HTTP marchent toujours. 
+4. Une fois que tes 3 images Docker sont buildées, run ces images pour vérifier que les appels HTTP marchent toujours. 
 
 /!\ Les Docker étant des machines virtuelle, elles n'arriveront pas à communiquer entre elles via `localhost` ou `127.0.0.1`. Tu va devoir user de tes talents, mais surtout des variables d'environnements et des options du `docker run` pour que tes applications puissent se connecter à ta base de données, et que ton application "api" puissent contacter "dogs" et "owner"
 
 # Exercice docker-compose
 
-1. Créé un docker-compose.yaml pour faciliter le "build" et le "run" de ces 3 images
+1. Créé un docker-compose.yaml pour lancer ta (tes?) base de données, et faciliter le "build" et le "run" de tes 3 applications
+2. Lance ce docker-compose pour vérifier que tes applications tournent toujours.
 
-# Exercice "Surprends-moi !"
-
-1. Installe un docker rabbitmq
-2. Transforme tes 2 applications "dogs" et "owner" en client rabbitmq (il va falloir que tu modifie les appels d'"api" vers ces micro-services, car ce n'est plus de l'HTTP)
+## Félicitations ! T'as créé une architecture microservice !
