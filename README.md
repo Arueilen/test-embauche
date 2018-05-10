@@ -31,8 +31,8 @@ Voici un exemple de donnée retour pour le listing:
 ```json
 [
     {
-        "nom": "Alex",
-        "prenom": "Terrieur",
+        "nom": "Terrieur",
+        "prenom": "Alex",
         "civilite": "M",
         "age": "29",
         "id": 1,
@@ -44,8 +44,8 @@ Voici un exemple de donnée retour pour le listing:
         ]
     },
     {
-        "nom": "Alain",
-        "prenom": "Proviste",
+        "nom": "Proviste",
+        "prenom": "Alain",
         "civilite": "M",
         "age": "12",
         "id": 2,
