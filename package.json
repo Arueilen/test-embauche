@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Arueilen/test-embauche/issues"
   },
-  "homepage": "https://github.com/Arueilen/test-embauche#readme"
+  "homepage": "https://github.com/Arueilen/test-embauche#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "request": "^2.85.0"
+  }
 }
