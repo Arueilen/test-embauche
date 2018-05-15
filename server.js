@@ -14,7 +14,7 @@ app.get('/', (req, res)=>{
 	res.sendFile('views/dogForm.html', {root: __dirname });
 });
 app.get('/dogs', (req, res)=>{
-	select.alldogs().then((e)=>{
+	select.alldogs(req.query).then((e)=>{
 		res.send(e);
 	});
 });
