@@ -1,6 +1,6 @@
 const mysql = require('mysql'),
 express = require('express'),
-store = require('./modules/storeDog.js'),
+store = require('./modules/store.js'),
 bodyParser = require('body-parser'),
 
 app = express();
