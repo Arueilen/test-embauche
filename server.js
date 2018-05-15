@@ -1,6 +1,7 @@
 const mysql = require('mysql'),
 express = require('express'),
 store = require('./modules/store.js'),
+select = require('./modules/select.js'),
 bodyParser = require('body-parser'),
 
 app = express();
@@ -13,7 +14,9 @@ app.get('/', (req, res)=>{
 	res.sendFile('views/dogForm.html', {root: __dirname });
 });
 app.get('/dogs', (req, res)=>{
-	// will return json of all dogs
+	select.alldogs().then((e)=>{
+		res.send(e);
+	});
 });
 app.post('/createDog', (req, res) => {
 	store.dog({
