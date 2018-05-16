@@ -11,22 +11,26 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/', (req, res)=>{
-	res.sendFile('views/dogForm.html', {root: __dirname });
+	res.sendFile('views/ownerForm.html', {root: __dirname });
 });
-app.get('/dogs', (req, res)=>{
-	select.alldogs(req.query).then((e)=>{
+app.get('/owners', (req, res)=>{
+	select.allowners(req.query).then((e)=>{
 		res.send(e);
 	});
 });
-app.post('/createDog', (req, res) => {
-	store.dog({
-		// passing props name to store dog
-		name: req.body.name,
-		// passing props owner_id
-		owner_id: req.body.owner_id
+app.post('/createOwner', (req, res) => {
+	store.owner({
+		// passing props to store owner
+		first_name: req.body.first_name,
+		last_name: req.body.last_name,
+		civility: req.body.civility,
+		age: req.body.age
 	})
-	// store dog being a Promise, on resolve send status 200
-	.then(() => res.sendStatus(200))
-})
+	// store owner being a Promise, on resolve send status 200
+	.then(() => (select.allowners(req.query).then((e)=>{
+		// res.redirect('/owners');
+		res.json(e);
+	})))
+});
 
 app.listen(8000, ()=>console.log('app running on localhost:8000'));

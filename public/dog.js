@@ -1,12 +1,14 @@
-const CreateDog = document.querySelector('.createDog');
+const CreateOwner = document.querySelector('.createOwner');
 
-CreateDog.addEventListener('submit', e=>{
+CreateOwner.addEventListener('submit', e=>{
 	e.preventDefault();
 	// get value of input where name=name
-	const name = CreateDog.querySelector('input[name="name"]').value,
+	const last_name = CreateOwner.querySelector('input[name="last_name"]').value,
+	const first_name = CreateOwner.querySelector('input[name="first_name"]').value,
+	const civility = CreateOwner.querySelector('input[name="civility"]').value,
 	// get value of input where name=owner_id
-	owner_id = CreateDog.querySelector('input[name="owner_id"]').value;
-	post('/createDog', { name, owner_id });
+	age = CreateOwner.querySelector('input[name="age"]').value;
+	post('/createOwner', { last_name, first_name, civility, age });
 });
 
 function post (path, data) {

@@ -1,11 +1,13 @@
 const knex = require('knex')(require('../knexfile'))
 
 module.exports = {
-	dog : ({ name, owner_id }) => {
+	owner : ({ last_name, first_name, civility, age }) => {
 		// call knex to add a dog with name = ${name} and owner_id = ${owner_id} to DB
-		return knex('dog').insert({
-			name,
-			owner_id
+		return knex('owner').insert({
+			last_name,
+			first_name,
+			civility,
+			age
 		})
 	}
 }
