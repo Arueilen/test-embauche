@@ -3,6 +3,6 @@ module.exports = {
 	connection: {
 		user: 'root',
 		password: 'root',
-		database: 'dogs_app'
+		database: 'owners_app'
 	}
 }
