@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  dogs:
+    build: ./dogs
+    restart: on-failure
+    ports:
+      - 8080:8080
+    environment:
+      DB_CONNECTION: root:example@192.168.1.7/admin
+
+  owners:
+    build: ./owners
+    restart: on-failure
+    ports:
+      - 8082:8082
+    environment:
+      DB_CONNECTION: root:example@192.168.1.7/admin
+
+  api:
+    build: ./api
+    restart: on-failure
+    ports:
+      - 8083:8083
+    environment:
+      DOG_HOST: 192.168.1.7:8080
+      OWNER_HOST: 192.168.1.7:8082
