@@ -1,7 +1,41 @@
 const knex_owners = require('knex')(require('../knex/knexfile.owners')),
-knex_dogs = require('knex')(require('../knex/knexfile.dogs'));
+knex_dogs = require('knex')(require('../knex/knexfile.dogs')),
+request = require('request'),
+
+http= require('http');
 
 module.exports = {
+
+	ownersApi : (req, res) => {
+		// http.request("192.168.1.112:8080/owners", function(error, response, body){
+		return new Promise((resolve, reject) => {
+			request("http://localhost:8080/owners", function(error, response, body){
+				// setTimeout(()=>{
+					if(!error){
+						resolve(body)
+					}else{
+						console.log(error);
+						return error;
+					}
+				// }, 1000)
+			})
+		})
+	},
+	dogsApi : (req, res) => {
+		// http.request("192.168.1.112:8080/owners", function(error, response, body){
+		return new Promise((resolve, reject) => {
+			request("http://localhost:8008/dogs", function(error, response, body){
+				// setTimeout(()=>{
+					if(!error){
+						resolve(body)
+					}else{
+						console.log(error);
+						return error;
+					}
+				// }, 1000)
+			})
+		})
+	},
 	SearchDog : (owners) => {
 		return new Promise((resolve, reject)=>{
 
@@ -33,6 +67,7 @@ module.exports = {
 			r = r.orWhere(e, query[e]);
 		})
 
+        // console.log(r)
 		return r;
 	},
 	closeSearch : (query) => {
