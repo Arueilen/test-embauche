@@ -1,9 +1,9 @@
+
 const mysql = require('mysql'),
 express = require('express'),
 store = require('./modules/store.js'),
 select = require('./modules/select.js'),
 bodyParser = require('body-parser'),
-
 app = express();
 
 app.use(express.static('public'));
@@ -18,6 +18,8 @@ app.get('/owners', (req, res)=>{
 		res.send(e);
 	});
 });
+
+
 app.post('/createOwner', (req, res) => {
 	store.owner({
 		// passing props to store owner
@@ -33,4 +35,4 @@ app.post('/createOwner', (req, res) => {
 	})))
 });
 
-app.listen(8000, ()=>console.log('app running on localhost:8000'));
+app.listen(8080, ()=>console.log('app owners running on localhost:8080'));
