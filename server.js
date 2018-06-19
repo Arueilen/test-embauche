@@ -14,7 +14,7 @@ app.get('/', (req, res)=>{
 	res.send("les routes de l'api sont : <br>\
 		pour voir tout les chiens -> /dogs <br>\
 		pour filtrer -> /dogs?name=nomduchien&owner_id=owner_id <br>\
-		pour creer un chien -> /post?name=nomduchien&owner_id=owner_id"
+		pour creer un chien -> /createDog?name=nomduchien&owner_id=owner_id"
 		);
 });
 app.get('/dogs', (req, res)=>{
