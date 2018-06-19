@@ -11,7 +11,11 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/', (req, res)=>{
-	res.sendFile('views/dogForm.html', {root: __dirname });
+	res.send("les routes de l'api sont : <br>\
+		pour voir tout les chiens -> /dogs <br>\
+		pour filtrer -> /dogs?name=nomduchien&owner_id=owner_id <br>\
+		pour creer un chien -> /post?name=nomduchien&owner_id=owner_id"
+		);
 });
 app.get('/dogs', (req, res)=>{
 	select.alldogs(req.query).then((e)=>{
@@ -21,14 +25,24 @@ app.get('/dogs', (req, res)=>{
 app.post('/createDog', (req, res) => {
 	store.dog({
 		// passing props name to store dog
-		name: req.body.name,
+		name: req.query.name,
 		// passing props owner_id
-		owner_id: req.body.owner_id
+		owner_id: req.query.owner_id
 	})
 	// store dog being a Promise, on resolve send status 200
-	.then((dogs) => {
-		console.log(dogs);
-		res.json(dogs);
+	// .then((dog) => {
+	// 	console.log("dog created");
+	// 	res.json(dog);
+	// })
+	.then(() => (
+		select.alldogs(req.query)
+		.then((dog)=>{
+			console.log('dog created: ', dog)
+			res.json(dog);
+		})
+	))
+	.catch(function(error) {
+		res.send(error)
 	})
 })
 
