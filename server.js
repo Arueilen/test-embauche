@@ -26,7 +26,10 @@ app.post('/createDog', (req, res) => {
 		owner_id: req.body.owner_id
 	})
 	// store dog being a Promise, on resolve send status 200
-	.then(() => res.sendStatus(200))
+	.then((dogs) => {
+		console.log(dogs);
+		res.json(dogs);
+	})
 })
 
-app.listen(8000, ()=>console.log('app running on localhost:8000'));
+app.listen(8008, ()=>console.log('app dogs running on localhost:8008'));
